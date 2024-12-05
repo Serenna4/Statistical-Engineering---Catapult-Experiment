@@ -1,0 +1,123 @@
+---
+title: "CATAPULTING INTO EXPERIMENTAL DESIGN"
+author: 'Group 6: Graham Blechshmidt, Brooke Proctor, Serenna Walter'
+subtitle: "DATA299 Statistical Engineering - FA24 - Project 1"
+output:
+  word_document: default
+  pdf_document: default
+  html_document: default
+---
+
+<center>![](https://willamette.edu/offices/marketing/images/for-download/everyday-user/compass/large/compass-full-color.jpg){width="100"}</center>
+
+------------------------------------------------------------------------
+
+# Introduction
+
+Talk about...
+
+-   brief history of catapults
+
+-   how catapults work (high-level...no need to get too jargony)
+
+-   factors that can impact the trajectory of the object being launched
+
+-   the purpose of this study (finding the settings that maximize launch distance)
+
+    Slings, bows, and rocks–what do these things all have in common? They are predecessors of the catapult. A catapult is a ballistic instrument that works to hurl objects through the air. How did these magnificent works come to be? Greeks and Romans were some of the first to utilize the catapult, though India and the Middle East were also a part of this early usage. These preliminary models were difficult to load, due to the clunky size and lack of uniformity. The Middle Ages brought about great advancements to the catapult, as their role in war became notable. Since then, the mechanisms have been more or less the same across time thus far. 
+
+    Luckily, the mechanisms that catapults employ are easy to understand. A catapult is made up of an arm, a string, and a frame, in the most basic of designs. By tightening the string via twisting in one direction, tension builds until it is released, and the arm swings and launches the projectile forward as the arm hits the frame.
+
+    The trajectory of a catapult launch is determined by a few primary factors: the catapult arm, tension, and release angle. The catapult arm is important in this process because the distance traveled will rely heavily on the length of the arm. Tension is also important because that tension is the elastic potential energy that will propel the projectile. Finally, the angle is important, because similar to the twists, the smaller the angle is, the more tension is being built up in order to transfer the potential energy to the projectile. All of these factors implicate the trajectory of the projectile.
+
+    This study seeks to understand the optimal settings of which should be employed during the launching of the catapult in order to achieve the most in-air distance by the projectile. By testing three factors and three levels each, then running some statistical analysis, the study will be able to identify the optimal levels of each factor.
+
+# Methodology
+
+-   What factors and levels were used in the study?
+
+-   Did you block on any variables?
+
+-   How many replicates did you have per split?
+
+-   What was the response variable?
+
+-   What type of design did you create? (full factorial, fractional factorial, ...)
+
+-   Include a full table of design splits
+
+-   What were the logistics of the experiment? (including randomization)
+
+-   Were there any uncontrollable variables? If so, how did you control other aspects to isolate the effects of the uncontrollable variables?
+
+    The experiment had one response variable: the distance in inches between the end of the catapult base and the impact spot of the payload and the floor. The goal was to discover the best combination of the allotted factors that achieved the greatest launch distance. Therefore, there was no need for a control because all reasonable combinations were tested. The factors and their respective levels are expressed below.
+
+    -   Catapult Arm Length - 6, 7.5, and 9 inches
+
+    -   Launch Angle - 20, 30 and 40 degrees
+
+    -   Twists (Tension) - 4, 5, and 6 twists
+
+    Starting with catapult arm length, the specific levels used were chosen based on the compatibility with the catapult. The 6-inch arm length was the base length of the base-built catapult. As for the 9-inch arm length, any lengths exceeding this had begun negatively impacting the functionality of the catapult launch itself. The 7.5-inch arm was found to have a center value equidistant from the maximum and minimum lengths. Similarly, the launch angle values were selected to keep the catapult functional. The angles were measured from the ground to the top of the catapult arm. Lower angles meant a shorter arc between the arm and the floor. Angles exceeding 45 degrees were vulnerable to the payload falling off the catapult prematurely, and values too close to 0 would result in a misfire of the catapult. Thus, the angles were chosen as cascading values between both of those thresholds. Lastly, the twist or tension levels were determined based on the maximum strain the rope of the catapult could hold. It was found that 6 two-handed 180-degree twists was the max. The remaining levels were chosen by reducing the max by one or two twists to preserve high tension in the string, allowing successful launches. 
+
+    The experiment was based on a 56-split full factorial. Then, it was changed to a resolution 3 fractional factorial to meet time constraints and conduct a realistic experiment. This left only the main factor interactions unaliased, resulting in a 12-split fractional factorial.
+
+    In this experiment, 12 splits were explicitly tested. For each split, four replicates allowed for comparisons and analysis to be computed following the completed testing. Thus, the experiment had a sample size of 48, which was acceptable to measure the trends in the experiment adequately. Blocking of the catapult launcher (cl) was added to mitigate errors caused by different operators. This blocking was added for every unique split, doubling the total trials tested. 
+
+    To run the experiment consistently and mitigate needless errors, any alterations to the catapult were kept under control. Namely, when the payload was launched, the catapult launcher (cl1, or cl2) also acted as a stabilizer. The stabilization would occur by holding the catapult down, keeping it parallel to the ground, and firmly in its initial position. When in use, only one individual would be in contact with the catapult at a time. All alterations made to the catapult’s string tension (twists) would remain consistent throughout the experiment by only allowing the designated measurer (an individual not cl1 or cl2) to change it. The length of the catapult arm was solely changed by the designated measurer. Any habits the measurer had then would remain as yet another unchanged variable. The distance the payload traveled was always measured as the distance between the impact spot of the payload on the floor and the closest side of the catapult base. The same tape measure and payload (ping pong ball) were used for the experiment. Therefore, any deformities present on either would remain an unchanged variable. Since the payload was a ping-pong ball, it was more susceptible to air currents. To reduce this acknowledgeable impact the experiment was conducted in a contained environment.
+
+    Uncontrollable variables are present in every experiment. The most prevalent in this experiment was the rapid degradation of the catapult. The catapult experienced the largest decline in functionality in the latter half of the experiment. There were acknowledgments of the deterioration of the catapult. The other most significant uncontrollable variable was the difference in thickness of the catapult arm extender and the base catapult arm. This discrepancy was noted, but that was the limit of any action that could be taken. Ultimately, any attempt to reduce or fix the issue would undermine the validity of the experiment as sources of error would have been intentionally brought about. Knowing this, attempts were made to reduce variables that could be consistent throughout the experiment. 
+
+    ![](images/unnamed.png){width="753"}
+
+# Results
+
+-   Include some data viz for all of your factors. Make sure your graphs are clearly labeled and legible. 2-3 graphs max.
+
+-   Fit a regression model that's appropriate for your experimental design. Discuss the model that you fit and what it's telling you. I've provided sample LaTex for an equation that you can simply adapt with your variable names.
+
+-   You may include a screenshot of your model output in the report, but make sure you explain what it's telling you (ex: "the p-values indicate that these variables are significant...")
+
+    $\text{Distance}=b_0+b_1\text{Var1}+b_1\text{Var2}+...}$
+
+![](maineffects.png)
+
+This graph displays the main effects of each factor in the experiment on flying distance. The factors are the angle of the catapult arm, the length of the arm, and the number of twists in the catapult strings. In each box plot, the levels of all three factors exhibit a very significant effect on flying distance.
+
+![](operator.png)
+
+This graph displays the effects of different catapult operators on two factors on flying distance. These factors are the length of the catapult arm (along the top of the graph) and the angle of the arm (along the right side of the graph). In each boxplot, the different operators (either cl1 or cl2) show very little to no effect on flying distance. This is seen through all of the levels in these two factors.
+
+![](combined_2wayinteractions_plot.png)
+
+This figure displays three combinations of two-factor interactions. The first graph shows how the number of twists in the catapult strings interacts with the angle of the arm and the length of the arm. The second graph shows how the angle of the arm interacts with the length of the arm and the number of twists. The third graph shows how the length of the arm interacts with the arm angle and the number of twists. In every two-factor interaction graph, consistent dependence between each factor is displayed.
+
+![](linear_mod.png)
+
+The model for this experiment exhibits the level of effect that each experimental factor has on flying distance. The number of twists in the catapult has the largest significant effect. This is shown through the number of twists, which has the smallest p-value of 1.20e-11. Each of the other two factors also has a large significance. This is seen as the angle of the arm and the length of the arm both have small p-values (7.62e-8 and 2.58e-7). The model also shows that the catapult operator had less significance than other factors in terms of the flying distance. The p-value for the catapult launcher is relatively large with a value of 2.51e-1.
+
+# Conclusion
+
+Summarize your results
+
+-   Which factors were most dominant?
+
+-   What were the recommended settings to maximize the distance?
+
+List any limitations of the study.
+
+The most dominant factor is the tension–or number of twists. The p-value 1.2e-11 for the number of twists. The next most prevalent arm angle’s p-value was 7.62e-8. Arm length was the least significant with a p-value of 2.58e-7.
+
+Maximizing the flight distance can be achieved by setting the number of twists to 6, the arm length to 6 inches, and the arm angle to 20 degrees. These settings gave a maximum of 180 inches in the study. The model predicts that the flying distance with these settings should yield 144 inches.
+
+One limitation of this study was the time restriction. As this was designed to occur in class, there was an allotted time of one and a half hours to complete this. Perhaps with more time, forethought for planning, and use of more replicates, this study could have occurred with more accuracy. Another limitation is the quality of the catapult. Because the catapult is built with suspiciously inexpensive materials–namely glue–the stress via tension caused the slow breakdown of the catapult over time and repetitions. With a higher quality catapult, these results would have less variation due to the declining efficacy of launching.
+
+# References (delete if not used)
+
+[The Catapult: A History (review) (jhu.edu)](https://muse.jhu.edu/pub/1/article/223342/pdf)
+
+[How does a catapult work? \| HowStuffWorks](https://science.howstuffworks.com/transport/engines-equipment/question127.htm)
+
+[How does a catapult work step by step? (physics-network.org)](https://physics-network.org/how-does-a-catapult-work-step-by-step/)
+
+[The Art of the Catapult: Build Greek Ballistae, Roman Onagers, English ... - William Gurstelle - Google Books](https://books.google.com/books?hl=en&lr=&id=_Vk4DwAAQBAJ&oi=fnd&pg=PT7&dq=traction+catapult&ots=0yrwgEI-0L&sig=IJ1Me83fx9jqTBQ82aZizIQK0o0#v=onepage&q=siege%20engines&f=false)
